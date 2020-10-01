@@ -1,9 +1,13 @@
 function stringChecker (string) {
-    if (typeof string === 'string');
-    return true
+    if (typeof string === 'string') {
+        return true;
+    } else {
+        return false;
+    }
 }
 
 console.log(stringChecker('I am a string'))
+console.log(stringChecker())
 
 // *******************
 
@@ -26,11 +30,10 @@ console.log(numberCompare(12, 7))
 
 // *******************
 
-function stringJoiner() {
-    var strOne = 'Hello';
-    var strTwo = ' there!';
-    var newString = strOne.concat(strTwo);
+function stringJoiner(strOne, strTwo) {
+    space = ' '
+    var newString = strOne.concat(space).concat(strTwo);
     return newString
 }
 
-console.log(stringJoiner())
+console.log(stringJoiner('hello', 'there'))
