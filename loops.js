@@ -27,13 +27,79 @@
 //         console.log('index: ', idx)
 // })
 
-var student = {
-    name: 'Zac',
-    age: 27,
-    city: 'Fox Lake',
-    class: 'software development'
-}
+// *********FOR LOOPS WITH OBJECTS*************
+// var student = {
+//     name: 'Zac',
+//     age: 27,
+//     city: 'Fox Lake',
+//     class: 'software development'
+// }
 
-for (var key in student) {
-    console.log(key + " => " + student[key])
-}
+// for (var key in student) {
+//     console.log(key + " => " + student[key])
+// }
+
+// let user = {
+//     username: "spawnofsock57",
+//     email: "zinvergo@gmail.com",
+//     phone: "555-555-5555"
+//   };
+  
+//   for (var key in user) {
+//       console.log(key + " => " + user[key]);
+//   }
+
+//   ******AS FUNCTION*********
+
+// function objectList(info) {
+//     for (var key in info) {
+//         console.log(key + ": " + info[key])
+//     }
+// }
+
+// console.log(objectList(info = {
+//     name: 'Zac',
+//     age: 27,
+//     location: 'Illinois',
+//     dog: 'Diesel',
+//     hobby: ['art', 'writing', 'video games']
+// })) 
+
+
+// ********WHILE DO/WHILE LOOPS ***********
+
+// var players = [
+//     'Altuve',
+//     'Bregman',
+//     'Correa',
+//     'Springer'
+// ];
+
+// var i = 0;
+// while (i < players.length){
+//     console.log(players[i]);
+//     i++;
+// }
+
+// var i = 0;
+// do {
+//     console.log(players[i]);
+//     i++;
+// }
+// while (i < players.length)
+
+// ******************************************
+// let array = ['1', '2', '3', '4', '5', '6'];
+
+// function arrayPop(array){
+//     do { 
+//         array.reverse()
+//         var num = array.pop();
+//         return num;
+//     } while (array.length >= 1) ;
+//         return (array - '[]')
+// }    
+// console.log(arrayPop(array))
+// console.log(arrayPop(array))
+// console.log(arrayPop(array))
+// console.log(arrayPop(array))

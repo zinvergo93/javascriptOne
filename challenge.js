@@ -105,16 +105,16 @@
     // console.log(objectList())
     
 
-function objectList(info) {
-    for (var key in info) {
-        console.log(key + ": " + info[key])
-    }
-}
+// function objectList(info) {
+//     for (var key in info) {
+//         console.log(key + ": " + info[key])
+//     }
+// }
 
-console.log(objectList(info = {
-    name: 'Zac',
-    age: 27,
-    location: 'Illinois',
-    dog: 'Diesel',
-    hobby: ['art', 'writing', 'video games']
-}))
+// console.log(objectList(info = {
+//     name: 'Zac',
+//     age: 27,
+//     location: 'Illinois',
+//     dog: 'Diesel',
+//     hobby: ['art', 'writing', 'video games']
+// })) 
