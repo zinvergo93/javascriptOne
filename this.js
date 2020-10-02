@@ -28,29 +28,48 @@
 
 
 //   **************************************
-
-class Guide {
-    constructor(title, content) {
-      this.title = title
-      this.content = content
-    }
-    visibleToUser(viewingUserRole) {
-      if (viewingUserRole === 'paid') {
-        return true;
-      }
-    }
+//  Another version of above **********************
+// class Guide {
+//     constructor(title, content) {
+//       this.title = title
+//       this.content = content
+//     }
+//     visibleToUser(viewingUserRole) {
+//       if (viewingUserRole === 'paid') {
+//         return true;
+//       }
+//     }
     
-    renderContent(userRole) {
-      if (this.visibleToUser(userRole)) {
-        console.log(this.title + " - " + this.content);
-      } else {
-        this.content = '';
-        console.log(this.title + " - " + this.content);
-      }
-    }
-  }
-  let programming = new Guide('Guide to Programming', 'Content goes here...')
+//     renderContent(userRole) {
+//       if (this.visibleToUser(userRole)) {
+//         console.log(this.title + " - " + this.content);
+//       } else {
+//         this.content = '';
+//         console.log(this.title + " - " + this.content);
+//       }
+//     }
+//   }
+//   let programming = new Guide('Guide to Programming', 'Content goes here...')
   
   
   
   console.log(programming.renderContent('paid'))
+
+
+//   **********************************************************
+
+var seats = {
+    seats: 50,
+    seatsSold: 28,
+    remainingSeats: function(){
+      return (this.seats - this.seatsSold)
+      },
+    enoughSeats: function(){
+      if(this.remainingSeats() > 0){
+        return this.remainingSeats()
+      }
+    }
+  }
+  
+  
+  seats.remainingSeats()

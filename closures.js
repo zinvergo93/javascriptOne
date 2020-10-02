@@ -31,8 +31,8 @@
    }
  }
 
-// var roomOne = movieTheater()
-// console.log(roomOne.remainingSeats())
+var roomOne = movieTheater()
+console.log(roomOne.remainingSeats())
 
-console.log(movieTheater().remainingSeats()) 
+// console.log(movieTheater().remainingSeats()) 
 // will also work as single line
