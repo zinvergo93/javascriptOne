@@ -136,14 +136,32 @@
 
 const blog = {
   title: 'My great post',
-  summary: 'Summary of my post'
+  // summary: 'Summary of my post'
+  //  if no 'summary' argument, next declaration is passed
 }
 
-const openGraphMetadata = ({ title, summary = 'A DailySmarty Post' }) => {
-  console.log(`
-    og-title=${title}
-    og-description=${summary}
-  `);
+// const openGraphMetadata = ({ title, summary = 'A DailySmarty Post' }) => {
+//   console.log(`
+//     og-title=${title}
+//     og-description=${summary}
+//   `);
+// }
+
+// console.log(openGraphMetadata(blog));
+
+// ************************************
+
+const user = {
+  username: 'zachary_user',
+  status: 'away'
 }
 
-console.log(openGraphMetadata(blog));
+const loginEvent = ({username, status = 'active'}) => {
+  return `your_username is active`
+}
+
+// const loginEvent = ({user}) => {
+  // user.status = 'active'
+  // return 'your_username is active'
+// }
+console.log(loginEvent(user));

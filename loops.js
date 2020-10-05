@@ -103,3 +103,30 @@
 // console.log(arrayPop(array))
 // console.log(arrayPop(array))
 // console.log(arrayPop(array))
+
+
+// ********Loop array challenge w/numbers****
+
+// let numbers = [1, 2, 3, 4]
+// let sum = 0
+// for (let i = 0; i< numbers.length; i++) {
+//     sum += numbers[i]
+// }
+
+
+// for in
+let numbers = [1, 2, 3, 4];
+
+for (let number in numbers) {
+        
+        console.log(number)
+}
+
+
+// for of
+
+// forEach
+
+// while loop
+
+// do-while
