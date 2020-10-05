@@ -8,6 +8,7 @@ const userTwo = {
     lastName: 'Invergo'
 }
 
+// do not use => functions
 const fullName = function() {
     return `${this.lastName}, ${this.firstName}`;
 }

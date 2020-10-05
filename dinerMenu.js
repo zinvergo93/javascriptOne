@@ -26,7 +26,8 @@ function dinerMenu (breakfast, lunch, dinner, currentSelection, totalPrice) {
         console.log(prompt(`What menu would you like today? Please enter: ${breakfast}, ${lunch} or ${dinner}`, ""));
         
         class breakfastMenu {
-        
+        // Implement 'this' constructor for class
+
             if (menuPick = 'breakfast') {
                 menuPrinter = breakfast;
 
@@ -39,7 +40,7 @@ function dinerMenu (breakfast, lunch, dinner, currentSelection, totalPrice) {
 
                     function breakfastOrder (breakfastChoice, breakfastSides, sideSelection, totalPrice) {
                     
-                        if (breakfastChoice = true) {
+                        if (breakfastOrder = true) {
                             if (breakfastChoice = 1) {
                                 let currentSelection = breakfastChoiceOne
                                 console.log(totalPrice(`Your current total is ${bPriceOne}`));
@@ -114,7 +115,7 @@ function dinerMenu (breakfast, lunch, dinner, currentSelection, totalPrice) {
                 // print price function
 
                 
-                function totalPrice (entreePrice, drink, tip){
+                // function totalPrice (entreePrice, drink, tip){
                     
                 }
             };

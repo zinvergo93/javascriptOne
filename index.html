@@ -6,6 +6,23 @@
     <title>Document</title>
 </head>
 <body>
-    <script src = "./loops.js"></script>
+    <script>
+        console.log('Starting fetch call');
+        const postsPromise = fetch('https://api.dailysmarty.com/posts');
+        console.log('After fetch call');
+        console.log(postsPromise);
+        console.log('After program has run');
+
+        postsPromise
+            .then(response => response.json())
+            .then(data => {
+                data.posts.ForEach((item) => {
+                    console.log(item.url_for_post);
+                });
+            })
+            .catch((err) => {
+                console.log(err);
+            });
+    </script>
 </body>
 </html>
