@@ -29,4 +29,16 @@ loginActivities.then(function (res) {
   res.forEach(function (activity) {
     console.log(activity);
   });
+}); //*************Async and Await processes *****************
+// fetch('https://jsonplaceholder.typicode.com/posts')
+// .then((res) => res.json())
+// .then((data) => console.log(data))
+
+var postsJson = fetch('https://jsonplaceholder.typicode.com/posts');
+postsJson.then(function (data) {
+  return data.json();
+}).then(function (data) {
+  data.forEach(function (element) {
+    return console.log(element);
+  });
 });

@@ -38,3 +38,21 @@ const greeting = new Promise((resolve, reject) =>{
       console.log(activity);
     })
   })
+
+
+//*************Async and Await processes *****************
+
+
+// fetch('https://jsonplaceholder.typicode.com/posts')
+// .then((res) => res.json())
+// .then((data) => console.log(data))
+
+const postsJson = fetch('https://jsonplaceholder.typicode.com/posts');
+
+
+postsJson
+.then(data => data.json())
+.then(data => {
+    data.forEach((element =>
+    console.log(element)));
+});

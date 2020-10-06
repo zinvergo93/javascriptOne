@@ -95,40 +95,62 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 //     `${seniorInstructor.name} can teach: ${Instructor.canTeach(seniorInstructor)}`
 //   );
 //   *****************************************************
-var Home =
+// class Home {
+// 	constructor({ type, payment = "renting" }) {
+// 		this.type = type;
+// 		this.payment = payment;
+// 	}
+// 	static homeImprovement(yourHome) {
+// 		return (yourHome.payment === 'mortgage')
+// 	}
+// }
+// let choice1 = new Home({type: 'house', payment: 'mortgage'})
+// let choice2 = new Home({type: 'apartment'})
+// console.log(Home.homeImprovement(choice1))// true
+// console.log(Home.homeImprovement(choice2))// false
+// console.log(`The first choice is a ${choice1.type}, which can be paid for with mortgage: ${Home.homeImprovement(choice1)}`)
+// console.log(`The second choice is a ${choice2.type}, which can be paid for with mortgage: ${Home.homeImprovement(choice2)}`)
+// ^^^^^^^^^^^^^^^^^^^^RETURNS BOOLEAN VALUES OF TRUE OR FALSE BASED ON STATIC METHOD ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+var Student =
 /*#__PURE__*/
 function () {
-  function Home(_ref) {
-    var type = _ref.type,
-        _ref$payment = _ref.payment,
-        payment = _ref$payment === void 0 ? "renting" : _ref$payment;
+  function Student(_ref) {
+    var name = _ref.name,
+        _ref$email = _ref.email,
+        email = _ref$email === void 0 ? 'none' : _ref$email,
+        programming = _ref.programming;
 
-    _classCallCheck(this, Home);
+    _classCallCheck(this, Student);
 
-    this.type = type;
-    this.payment = payment;
+    this.name = name;
+    this.email = email;
+    this.programming = programming;
   }
 
-  _createClass(Home, null, [{
-    key: "homeImprovement",
-    value: function homeImprovement(yourHome) {
-      return yourHome.payment === 'mortgage';
+  _createClass(Student, [{
+    key: "renderDetails",
+    value: function renderDetails() {
+      console.log("".concat(this.name, ", ").concat(this.email, ", ").concat(this.programming));
+    }
+  }], [{
+    key: "hasContact",
+    value: function hasContact(contact) {
+      return contact.email != 'none';
     }
   }]);
 
-  return Home;
+  return Student;
 }();
 
-var choice1 = new Home({
-  type: 'house',
-  payment: 'mortgage'
+var studentOne = new Student({
+  name: 'Zac',
+  email: 'zac@invergo.net',
+  programming: 'Python'
 });
-var choice2 = new Home({
-  type: 'apartment'
+var studentTwo = new Student({
+  programming: 'Ruby'
 });
-console.log(Home.homeImprovement(choice1)); // true
-
-console.log(Home.homeImprovement(choice2)); // false
-
-console.log("The first choice is a ".concat(choice1.type, ", which can be paid for with mortgage: ").concat(Home.homeImprovement(choice1)));
-console.log("The second choice is a ".concat(choice2.type, ", which can be paid for with mortgage: ").concat(Home.homeImprovement(choice2))); // ^^^^^^^^^^^^^^^^^^^^RETURNS BOOLEAN VALUES OF TRUE OR FALSE BASED ON STATIC METHOD ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+console.log(Student.hasContact(studentOne));
+console.log(Student.hasContact(studentTwo));
+console.log("The first new student is ".concat(studentOne.name, ". Their favorite programming language is ").concat(studentOne.programming));
+console.log("The second new student's favorite programming language is ".concat(studentTwo.programming));

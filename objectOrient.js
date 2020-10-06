@@ -115,23 +115,47 @@
 
 //   *****************************************************
 
-class Home {
-	constructor({ type, payment = "renting" }) {
-		this.type = type;
-		this.payment = payment;
-	}
+// class Home {
+// 	constructor({ type, payment = "renting" }) {
+// 		this.type = type;
+// 		this.payment = payment;
+// 	}
 
-	static homeImprovement(yourHome) {
-		return (yourHome.payment === 'mortgage')
-	}
-}
+// 	static homeImprovement(yourHome) {
+// 		return (yourHome.payment === 'mortgage')
+// 	}
+// }
 
-let choice1 = new Home({type: 'house', payment: 'mortgage'})
-let choice2 = new Home({type: 'apartment'})
+// let choice1 = new Home({type: 'house', payment: 'mortgage'})
+// let choice2 = new Home({type: 'apartment'})
 
-console.log(Home.homeImprovement(choice1))// true
-console.log(Home.homeImprovement(choice2))// false
-console.log(`The first choice is a ${choice1.type}, which can be paid for with mortgage: ${Home.homeImprovement(choice1)}`)
-console.log(`The second choice is a ${choice2.type}, which can be paid for with mortgage: ${Home.homeImprovement(choice2)}`)
+// console.log(Home.homeImprovement(choice1))// true
+// console.log(Home.homeImprovement(choice2))// false
+// console.log(`The first choice is a ${choice1.type}, which can be paid for with mortgage: ${Home.homeImprovement(choice1)}`)
+// console.log(`The second choice is a ${choice2.type}, which can be paid for with mortgage: ${Home.homeImprovement(choice2)}`)
 
 // ^^^^^^^^^^^^^^^^^^^^RETURNS BOOLEAN VALUES OF TRUE OR FALSE BASED ON STATIC METHOD ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+
+class Student {
+    constructor ({name, email = 'none', programming}) {
+        this.name = name; 
+        this.email = email;
+        this.programming = programming; 
+    }
+
+    renderDetails() {
+        console.log(`${this.name}, ${this.email}, ${this.programming}`);
+    }
+    static hasContact(contact) {
+        return (contact.email != 'none')
+    }
+}
+
+let studentOne = new Student({name: 'Zac', email: 'zac@invergo.net', programming: 'Python'})
+let studentTwo = new Student({programming: 'Ruby'})
+
+console.log(Student.hasContact(studentOne))
+console.log(Student.hasContact(studentTwo))
+console.log(`The first new student is ${studentOne.name}. Their favorite programming language is ${studentOne.programming}`)
+console.log(`The second new student's favorite programming language is ${studentTwo.programming}`)
